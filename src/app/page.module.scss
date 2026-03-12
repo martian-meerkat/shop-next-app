@@ -1,0 +1,15 @@
+.title {
+  margin: 24px 0 8px 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 78px auto 54px;
+  padding: 0 var(--container-padding);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}

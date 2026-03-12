@@ -1,0 +1,43 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 42px;
+  background-color: var(--layout);
+  width: 100vw;
+  z-index: 100;
+  border-top: 2px solid #96289c;
+  scrollbar-gutter: stable;
+
+  .container {
+    max-width: calc(var(--container-width) - var(--scrollbar-width));
+    padding-left: calc(var(--scrollbar-width) / 2);
+    display: flex;
+    color: var(--layout-text);
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    line-height: 42px;
+
+    @media (max-width: 1090px) {
+      padding-left: var(--container-padding);
+    }
+
+    @media (min-width: 1090px) and (max-width: 1125px) {
+      margin-left: 25px;
+      padding-left: 0;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+    }
+
+    & > p:first-child {
+      margin-right: 24px;
+
+      @media (max-width: 480px) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.notification {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f44336;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  max-width: 450px;
+  height: 48px;
+  z-index: 200;
+  animation: slideIn 0.3s ease;
+}
+
+.message {
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  padding-left: 12px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
