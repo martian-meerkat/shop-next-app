@@ -32,6 +32,7 @@ const LoginForm: FC = () => {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          minLength={3}
           required
         />
       </div>
@@ -43,6 +44,7 @@ const LoginForm: FC = () => {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          minLength={3}
           required
         />
       </div>
